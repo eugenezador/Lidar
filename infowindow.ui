@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InfoWindow</class>
+ <widget class="QDialog" name="InfoWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>869</width>
+    <height>634</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>869</width>
+    <height>634</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>INFO</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>Ver - запрос версии устройства (горячая клавиша - 'v')
+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>SRRxx - установка частоты следования импульсов (1 - 10 ГЦ)
+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>LON - запуск лазера (при включении по умолчанию выключено) (горячая клвиша - 'f2')
+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>LOF - прекращение работы лазера (горячая клавиша - 'f3')
+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>NIMxx - задание режима работы - количества импульсов, вырабатываемых устройством после получения команды LON,
+ в том числе при внешнем запуске (при задании 0 - неограниченная работа с постоянной частотой) 
+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>CSS - запрос состояния устройства.
+Отклик CSS _xx самостоятельно выдается устройством при изменениях его состояни, каковыми считаются 
+    - Готовность к работе - отклик CSS_RDY,
+    - Работа - отклик CSS_WRK,
+    - Невозможность работы - отклик CSS_ERR
+(горячая клавиша - 'f4')
+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>VLT - запрос напряжения накопителя.
+Отличие выводимого значения от реального может составлять 5%
+(горячая клавиша - 'f5')
+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>TM1 - запрос реальной температуры, возврящяется в град Цельсия (горячая клавиша - 't')
+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>RST - сброс состояния ошибки (горячая клавиша - 'r')
+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_10">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string>SYN - устновкаисточника запуска лазера (при включении по умолчанию определен внутренний запуск)
+    - SYN1 - работа от внутреннего генератора (горячая клавиша - 'f6'),
+    - SYN2 - работа от внешних импульсов запуска(горячая клавиша - 'f7')
+
+</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
