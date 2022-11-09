@@ -16,6 +16,8 @@ public:
     void do_connect();
     void do_disconnect();
 
+    bool is_connect = false; // переменная сообщает статус подключения а классе lidar
+
 signals:
     void data_from_lidar(QByteArray received_data);
 

@@ -22,7 +22,7 @@ void TcpSocket::do_connect()
 
     socket->connectToHost("192.168.2.10", 800);
 
-    if(!socket->waitForConnected(5000))
+    if(!socket->waitForConnected(4000))
     {
         qDebug() << "Error: " << socket->errorString();
     }
@@ -35,6 +35,8 @@ void TcpSocket::do_disconnect()
 
 void TcpSocket::connected()
 {
+    is_connect = true;
+
     qDebug() << "connected...";
 
     socket->write("");
@@ -42,6 +44,8 @@ void TcpSocket::connected()
 
 void TcpSocket::disconnected()
 {
+    is_connect = false;
+
     qDebug() << "disconnected...";
 }
 

@@ -499,15 +499,19 @@ void Lidar::get_numbers_from_raw_data(QByteArray received_data)
 void Lidar::on_tcp_connect_clicked()
 {
     emit do_tcp_connect();
-    ui->tcp_connect->setEnabled(0);
-    ui->tcp_disconnect->setEnabled(1);
+    if(socket->is_connect){
+        ui->tcp_connect->setEnabled(0);
+        ui->tcp_disconnect->setEnabled(1);
+    }
 }
 
 
 void Lidar::on_tcp_disconnect_clicked()
 {
     emit do_tcp_disconnect();
-    ui->tcp_connect->setEnabled(1);
-    ui->tcp_disconnect->setEnabled(0);
+    if(!socket->is_connect) {
+        ui->tcp_connect->setEnabled(1);
+        ui->tcp_disconnect->setEnabled(0);
+    }
 }
 
