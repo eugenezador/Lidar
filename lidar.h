@@ -2,6 +2,7 @@
 #define LIDAR_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 #include "qcustomplot.h"
 #include "comport.h"
 #include "infowindow.h"

@@ -502,6 +502,8 @@ void Lidar::on_tcp_connect_clicked()
     if(socket->is_connect){
         ui->tcp_connect->setEnabled(0);
         ui->tcp_disconnect->setEnabled(1);
+    } else {
+        QMessageBox::warning(this, "Warning", "TCP connection error");
     }
 }
 
@@ -512,6 +514,8 @@ void Lidar::on_tcp_disconnect_clicked()
     if(!socket->is_connect) {
         ui->tcp_connect->setEnabled(1);
         ui->tcp_disconnect->setEnabled(0);
+    } else {
+        QMessageBox::warning(this, "Warning", "TCP disconnect error");
     }
 }
 
